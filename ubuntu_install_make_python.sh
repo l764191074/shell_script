@@ -7,20 +7,20 @@ sudo apt install wget -y
 wget http://mirrors.sohu.com/python/3.6.2/Python-3.6.2.tgz
 tar -xvf Python-3.6.2.tgz
 cd Python-3.6.2
-./configure --prefix=/home/usr/python36/
+./configure --prefix=$HOME/usr/python36/
 make
 make install
-cd ../usr/python36/bin/
+cd $HOME/usr/python36/bin/
 mkdir -p ~/.pip/
 cat << EOF > ~/.pip/pip.conf
 [global]
-trusted-host=mirrors.aliyun.com
-index-url=http://mirrors.aliyun.com/pypi/simple/
+trusted-host=mirrors.163.com
+index-url=http://mirrors.163.com/pypi/simple/
 EOF
 
 sudo apt-get install libmysqlclient-dev -y
-ln -s /home/usr/python36/bin/pip3 /usr/local/sbin/pip36
-ln -s /home/usr/python36/bin/python3 /usr/local/sbin/python36
+ln -s $HOME/usr/python36/bin/pip3 /usr/local/sbin/pip36
+ln -s $HOME/usr/python36/bin/python3 /usr/local/sbin/python36
 
 ./pip3 install mysqlclient
 ./pip3 install Django
