@@ -1,4 +1,4 @@
-sudo sed -i 's\archive.ubuntu.com\mirrors.aliyun.com\g' /etc/apt/sources.list
+# sudo sed -i 's\archive.ubuntu.com\mirrors.aliyun.com\g' /etc/apt/sources.list
 sudo apt-get update
 cd /home/
 sudo apt-get install gcc  make zlib1g-dev -y
@@ -19,8 +19,8 @@ index-url=http://mirrors.163.com/pypi/simple/
 EOF
 
 sudo apt-get install libmysqlclient-dev -y
-ln -s $HOME/usr/python36/bin/pip3 /usr/local/sbin/pip36
-ln -s $HOME/usr/python36/bin/python3 /usr/local/sbin/python36
+sudo ln -s $HOME/usr/python36/bin/pip3 /usr/local/sbin/pip36
+sudo ln -s $HOME/usr/python36/bin/python3 /usr/local/sbin/python36
 
 ./pip3 install mysqlclient
 ./pip3 install Django
