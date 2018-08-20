@@ -5,7 +5,7 @@ sudo apt-get install gcc  make zlib1g-dev -y
 sudo apt-get install  libbz2-dev libsqlite3-dev  libxml2-dev  libffi-dev libssl-dev -y
 sudo apt install wget -y
 cd $HOME
-wget http://mirrors.sohu.com/python/3.6.6/Python-3.6.6.tgz
+wget https://npm.taobao.org/mirrors/python/python-3.6.6.tgz
 tar -xvf Python-3.6.6.tgz
 cd Python-3.6.6
 ./configure --prefix=$HOME/usr/python36/
